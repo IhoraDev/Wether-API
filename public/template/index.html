@@ -5,20 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-    <title> Test task for AIT </title>
+    <title> Weather API </title>
 
     <!-- Loading third party fonts -->
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Loading main css file -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/style.css">
-
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
-
-
 <body>
 <div class="row main-container">
     <div class="col-lg-8 firstEl">
@@ -27,9 +24,8 @@
             <div class="">
                 <form id="search_form" action="#" class="find-location">
                     <input id="search" type="text" placeholder="Find your location...">
-                    <button id="search_btn" type="button" name="button">Search</button>
+                    <button id="search_btn" type="button" name="button"> Search </button>
                 </form>
-
             </div>
         </div>
         <div class="forecast-table">
@@ -38,42 +34,42 @@
                     <div class="today forecast">
                         <div class="forecast-header">
                             <!-- <div id="week_day" class="day">Monday</div> -->
-                            <div id="date" class="date">-</div>
+                            <div id="date" class="date"> - </div>
                         </div> <!-- .forecast-header -->
                         <div class="forecast-content">
-                            <div id="city_name" class="location">-</div>
+                            <div id="city_name" class="location"> - </div>
                             <div class="degree">
-                                <div class="num"><label id="main_temp"></label><sup>o</sup>C</div>
+                                <div class="num"><sup> o </sup> C </div>
                                 <div id="icon_weather" class="forecast-icon">
-                                    <img src="images/icons/icon-1.svg" alt="" width=90>
+                                    <img src="../images/icons/icon-1.svg" alt="" width=90>
                                 </div>
-                                <p id="description"></p>
+<!--                                <p id="description"></p>-->
                             </div>
-                            <span><img src="images/icon-umberella.png" alt=""><label id="humidity">-</label>%</span>
-                            <span><img src="images/icon-wind.png" alt=""><label id="wind_speed">-</label>m/s</span>
-                            <span><img src="images/icon-compass.png" alt=""><label id="pressure">-</label>hPa</span>
+                            <span><img src="../images/icon-umberella.png" alt=""><label id="humidity"> - </label> % </span>
+                            <span><img src="../images/icon-wind.png" alt=""><label id="wind_speed">-</label> m/s </span>
+                            <span><img src="../images/icon-compass.png" alt=""><label id="pressure">-</label> hPa </span>
                         </div>
                         <div class="row max_min_temp">
                             <div class="col-md-6">
                                 <i class="fa fa-arrow-up"></i>
-                                <label id="max_temp">-</label>°C
+                                <label id="max_temp"> - </label> °C
                             </div>
                             <div class="col-md-6">
                                 <i class="fa fa-arrow-down"></i>
-                                <label id="min_temp">-</label>°C
+                                <label id="min_temp"> - </label> °C
                             </div>
                             <div class="col-md-6">
                                 <img class="_margin-r-10 _width-25 _height-15 lazyloaded"
                                      data-src="images/little_icons/sunshine-sunrise.png" alt="Nascer do sol"
-                                     src="images/little_icons/sunshine-sunrise.png">
+                                     src="../images/little_icons/sunshine-sunrise.png">
                                 <label id="sunrise">-</label>h
                             </div>
                             <div class="col-md-6">
                                 <img class="_margin-r-10 _width-25 _height-15 lazyloaded"
                                      data-src="images/little_icons/sunshine-sunrise.png" alt="Nascer do sol"
-                                     src="images/little_icons/sunshine-sunrise.png">
+                                     src="../images/little_icons/sunshine-sunrise.png">
 
-                                <label id="sunset">-</label>h
+                                <label id="sunset"> - </label> h
                             </div>
 
                         </div>
@@ -83,35 +79,35 @@
 
                     <div id="d0" class="forecast">
                         <div class="forecast-header">
-                            <div class="day">Tuesday</div>
+                            <div class="day"> Tuesday </div>
                         </div> <!-- .forecast-header -->
                         <div class="forecast-content">
                             <div class="forecast-icon">
-                                <img src="images/icons/icon-3.svg" alt="" width=48>
+                                <img src="../images/icons/icon-3.svg" alt="" width=48>
                             </div>
-                            <div class="degree"><label>23</label><sup>o</sup>C</div>
-                            <small><label>23</label><sup>o</sup></small>
+                            <div class="degree"><label> 23 </label><sup> o </sup> C </div>
+                            <small><label> 23 </label><sup> o </sup></small>
                         </div>
                     </div>
                     <div id="d1" class="forecast">
                         <div class="forecast-header">
-                            <div class="day">Tuesday</div>
+                            <div class="day"> Tuesday </div>
                         </div> <!-- .forecast-header -->
                         <div class="forecast-content">
                             <div class="forecast-icon">
-                                <img src="images/icons/icon-3.svg" alt="" width=48>
+                                <img src="../images/icons/icon-3.svg" alt="" width=48>
                             </div>
-                            <div class="degree"><label>23</label><sup>o</sup>C</div>
-                            <small><label>23</label><sup>o</sup></small>
+                            <div class="degree"><label> 23 </label><sup> o </sup> C </div>
+                            <small><label> 23 </label><sup> o </sup></small>
                         </div>
                     </div>
                     <div id="d2" class="forecast">
                         <div class="forecast-header">
-                            <div class="day">Tuesday</div>
+                            <div class="day"> Tuesday </div>
                         </div> <!-- .forecast-header -->
                         <div class="forecast-content">
                             <div class="forecast-icon">
-                                <img src="images/icons/icon-3.svg" alt="" width=48>
+                                <img src="../images/icons/icon-3.svg" alt="" width=48>
                             </div>
                             <div class="degree"><label>23</label><sup>o</sup>C</div>
                             <small><label>23</label><sup>o</sup></small>

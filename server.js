@@ -11,8 +11,8 @@ const app = express();
 let con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "1",
-    database: "testenode"
+    password: "Zx220485",
+    database: "my_test_DB"
 });
 
 // serve files from the public directory
@@ -56,6 +56,7 @@ app.post('/clicked', (req, res) => {
         con.query(sql, function (err, result, fields) {
             if (err) throw err;
 
+            let sql;
             if (result.length) {
                 sql = 'UPDATE history SET times=' + (parseInt(result[0].times) + 1) + ' WHERE city="' + req.body.city +
                     '" AND country="' + req.body.country + '"';
