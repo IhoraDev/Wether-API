@@ -21,7 +21,7 @@ app.use(bodyParser());
 
 // start the express web server listening on 8080
 app.listen(8080, () => {
-    console.log('listening on 8080');
+    console.log('listening on localhost port: 8080');
 });
 
 // serve the homepage
@@ -30,13 +30,13 @@ app.get('/', (req, res) => {
         res.writeHead(200, {'Content-Type': 'text/html'});
 
         con.connect(function (err) {
-            sql = 'SELECT * FROM history  ORDER BY times  desc LIMIT 5';
+            let sql = 'SELECT * FROM history  ORDER BY times  desc LIMIT 5';
             con.query(sql, function (err, result, fields) {
                 if (err) throw err;
                 res.write(data);
                 res.write('<div id="history">');
                 res.write('<h3>Search History</h3>');
-                for (var i = 0; i < result.length; i++) {
+                for (let i = 0; i < result.length; i++) {
                     res.write('<button onclick="get_infoDay(' + result[i].city + ')"> ' + result[i].city + '</button>');
                 }
                 res.write('</div>');
@@ -58,14 +58,14 @@ app.post('/clicked', (req, res) => {
 
             let sql;
             if (result.length) {
-                sql = 'UPDATE history SET times=' + (parseInt(result[0].times) + 1) + ' WHERE city="' + req.body.city +
-                    '" AND country="' + req.body.country + '"';
+                sql = 'UPDATE history SET times = (parseInt(result[0].times) + 1) WHERE city= req.body.city' +
+                    'AND country' + '=' + req.body.country;
 
                 con.query(sql, function (err, result, fields) {
                     if (err) throw err;
                 });
             } else {
-                sql = 'INSERT INTO history (city, country, times) VALUES ("' + req.body.city + '", "' + req.body.country + '", 1)';
+                sql = 'INSERT INTO history (city, country, times) VALUES (req.body.city, req.body.country + 1)';
                 con.query(sql, function (err, result, fields) {
                     if (err) throw err;
                 });

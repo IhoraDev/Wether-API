@@ -1,13 +1,9 @@
 console.log('Client-side code running');
 
 $(document).ready(function () {
-
-    function setDate() {
-
-    }
-
+    function setDate() {}
     function onOverlay() {
-        //  document.getElementById("overlay").style.display = "block";
+        //  document.getElementById("overlay").style.display = "block";re.!
     }
 
     function offOverlay() {
@@ -156,7 +152,7 @@ $(document).ready(function () {
 
         let podeIr = true;
 
-        if ($("#search").val()) {
+        if ($(search).val()) {
             let search = $("#search").val();
         } else {
             $("#search_form  .screen-reader-response").html('Preencha seu Nome');
